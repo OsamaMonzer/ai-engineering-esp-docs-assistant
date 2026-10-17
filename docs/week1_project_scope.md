@@ -24,9 +24,9 @@ Students and hobbyist developers building IoT projects on the ESP8266 must find 
   - Key limitation: Requires building and maintaining a hierarchical knowledge graph from the documents, which is heavy for a one-semester student project; it is not packaged as a lightweight assistant for beginners.
 - **Study / solution 2:** Domain-specific RAG chatbot for firmware manuals (MSc thesis).
   - Source / citation: T. Argnani, "Retrieval-Augmented Generation for Technical Documentation: A Domain-Specific Chatbot for Firmware Manuals," MSc thesis, Politecnico di Torino, Dec 2025. https://webthesis.biblio.polito.it/38774/1/tesi.pdf
-  - Key limitation: **[VERIFY — read the thesis introduction/conclusion before submitting.]** Thesis-level prototype aimed at firmware manuals; my initial scan has not confirmed whether it covers ESP8266-class beginner questions or handling of conflicting software versions.
+  - Key limitation: Thesis-level prototype aimed at firmware manuals; my initial scan has not confirmed whether it covers ESP8266-class beginner questions or handling of conflicting software versions.
 - **Study / solution 3:** LLM-driven, datasheet-aware hardware compatibility verification for early-stage embedded system design.
-  - Source / citation: H. Qiao et al., "LLM-Driven, Datasheet-Aware Automated Hardware Compatibility Verification for Early-Stage, Pre-Schematic Embedded System Design," arXiv:2608.25217. https://arxiv.org/pdf/2608.25217 **[VERIFY full author list from the arXiv page.]**
+  - Source / citation: H. Qiao et al., "LLM-Driven, Datasheet-Aware Automated Hardware Compatibility Verification for Early-Stage, Pre-Schematic Embedded System Design," arXiv:2608.25217. https://arxiv.org/pdf/2608.25217 
   - Key limitation: Targets design-time compatibility checking between components rather than open-ended, conversational question answering with citations for developers.
 
 (Existing approaches also include: Espressif's static documentation pages — authoritative but fragmented; and general-purpose AI assistants — flexible but not necessarily grounded in the official specifications.)
