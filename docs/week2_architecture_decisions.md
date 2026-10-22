@@ -7,7 +7,7 @@
 
 This document records the key architecture decisions for the V1 conceptual architecture (`week2_architecture_v1.png`), the trade-offs accepted, and the initial requirements traceability matrix. It builds on `week2_requirements.md` and `week2_evaluation_criteria.md`.
 
-![V1 conceptual architecture](week2_architecture_v1.png)
+![V1 conceptual architecture](../week2_architecture_v1.png)
 
 V1 is a conceptual architecture. Components are labelled by function; specific models, retrieval approaches, frameworks, and platforms are deliberately not chosen yet and will be selected in later topics.
 
