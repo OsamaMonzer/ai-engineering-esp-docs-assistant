@@ -30,7 +30,7 @@ Objectives referenced: **O1** â€” design a document-grounded assistant; **O2** â
 
 ## Evaluation Sets and Rubrics
 
-**Evaluation sets** (all questions are written from the supplied documents and stored in the `evaluation/` folder):
+**Evaluation sets** (The evaluation question sets and reference answers will be developed from the supplied documents and stored in the evaluation/ folder.):
 
 | Set | Minimum size | Used for |
 |---|---|---|
