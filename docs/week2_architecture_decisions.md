@@ -65,13 +65,15 @@ Starting point: **User Query → Language Model Service → Response**. This sim
 |---|---|---|---|---|
 | O3 | Functional (FR1, FR2); Non-functional (NFR2) | Answer correctness | Knowledge Access, Knowledge Source, Language Model Service | Rubric-scored results on the supported-question set (≥ 40 questions), compared with a base-model-only baseline. |
 | O1, O2 | Functional (FR4); Responsible AI (RAI1) | Source citation and support | Knowledge Source (source information), Grounding & Citation Check | Citation presence and citation–source match results from the evaluation run. |
-| O2 | Responsible AI (RAI2) | Electrical-ratings accuracy | Knowledge Source, Grounding & Citation Check | Numeric-claim audit on the electrical-ratings set (≥ 20 questions). |
+| O2 | Responsible AI (RAI2) | Electrical-ratings accuracy and verification reminder | Knowledge Source, Grounding & Citation Check | Numeric-claim audit and reminder check on the electrical-ratings set (≥ 20 questions). |
 | O2 | Functional (FR7); Responsible AI (RAI3) | Out-of-scope refusal and redirect | Scope / Safety Control | Refusal-and-redirect results on the out-of-scope set (≥ 20 queries). |
 | O2 | Functional (FR6); Responsible AI (RAI1) | Abstention when evidence is missing | Knowledge Access, Grounding & Citation Check | Abstention results on the no-evidence set (≥ 10 questions). |
 | O3 | Non-functional (NFR1, NFR3) | Response latency; inference cost | Evaluation Point | Latency and cost records over the 50-query workload. |
 | O1 | Functional (FR8) | Response clarity | Language Model Service, Application Interface | Clarity rubric scores on the supported-question responses. |
-| O2 | Responsible AI (RAI4) | Credential protection (privacy test cases defined in the RAI4 measurement method) | Privacy Control | Payload inspection results for test queries containing dummy credentials. |
-| O2 | Non-functional (NFR4) | Document-update time (defined in the NFR4 measurement method) | Document Ingestion | Result of a controlled document-add test with a new document. |
+| O2 | Responsible AI (RAI4) | Credential protection | Privacy Control | Payload inspection results for the privacy test set (≥ 10 queries containing dummy credentials). |
+| O2 | Non-functional (NFR4) | Document-update time | Document Ingestion | Result of a controlled document-add test with a new document. |
+| O2 | Functional (FR3, FR5) | Version applicability handling | Knowledge Source (version information), Knowledge Access, Response / Output (version note) | Version-handling results on the version-sensitive questions in the supported set (≥ 6 questions). |
+| O3 | Non-functional (NFR5) | Response reliability | Evaluation Point (records every response outcome) | Successful response rate over the 50-query workload. |
 
 ---
 
