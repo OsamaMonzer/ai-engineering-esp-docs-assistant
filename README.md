@@ -39,9 +39,12 @@ Undergraduate students and beginner-to-intermediate hobbyist developers building
 
 > Source PDFs are not committed to this repository (see `.gitignore`). Download them locally from the links above.
 
+**Data pipeline and reproducibility:** The Week 3 pipeline notebook downloads all three sources itself, and the SDK web page is saved as text. To reproduce the pipeline, open `notebooks/week3_pipeline.ipynb` in Google Colab and run all cells.
+
 ## Weekly Progress
 
-| Week | Focus                                              | Deliverable                                                                                                                                                | Status |
-|------|----------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|--------|
-| W1   | System map + project scope                         | README + docs                                                                                                                                              | ✅      |
-| W2   | Requirements, evaluation criteria, V1 architecture | `docs/week2_requirements.md`, `docs/week2_evaluation_criteria.md`, `docs/week2_architecture_v1.png`, `docs/week2_architecture_decisions.md`                | ✅      |
+| Week | Focus | Deliverable | Status |
+|------|-------|-------------|--------|
+| W1 | System map + project scope | README + docs | ✅ |
+| W2 | Requirements, evaluation criteria, V1 architecture | `docs/week2_requirements.md`, `docs/week2_evaluation_criteria.md`, `docs/week2_architecture_v1.png`, `docs/week2_architecture_decisions.md` | ✅ |
+| W3 | V1 data pipeline: ingest → inspect → prepare → validate → lineage | `notebooks/week3_pipeline.ipynb`, `docs/week3_data_inventory.md`, `docs/week3_pipeline_decisions.md`, `docs/week3_pipeline_diagram.png`, `data/week3_manifest.json`, `data/pipeline_v1/` | ✅ |
