@@ -59,7 +59,7 @@ PDF extraction separates lines with single newlines, so the paragraph splitter r
 ## 5. Evidence
 
 - Part B: 63 chunks (S01), 460 (S02), 30 (S03); all pages covered (23 of 23, 111 of 111); lineage manifest check **PASS** for 3 records.
-- Part C: Part C chunk text is identical to Part B for all three sources. Repeatability check (Cell 9): **[CONFIRM: three PASS lines after the final rerun]**.
+- Part C: Part C chunk text is identical to Part B for all three sources. Repeatability check (Cell 9): **PASS** for documents_datasheet, documents_trm and documents_sdk.
 - Differences between Part B and Part C: Part C records omit the `processing` field (it is in the manifest as `processing_method`); Part C inspection reports `units` rather than `pages`.
 
 ## 6. Risks carried to Topic 4
