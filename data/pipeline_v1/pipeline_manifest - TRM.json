@@ -1,0 +1,45 @@
+{
+  "pipeline_version": "week3-v1",
+  "generated_at_utc": "2026-11-02T01:15:02.668201+00:00",
+  "data_type": "documents_trm",
+  "configuration": {
+    "chunk_size": 500,
+    "method": "page/section-aware-line-packed",
+    "cleaning": "ligatures; split-T repair; whitespace",
+    "document_version": "Version 1.7"
+  },
+  "processing_method": "page/section-aware-line-packed chunks of 500 chars; ligatures; split-T repair; whitespace",
+  "sources": [
+    {
+      "path": "/content/week3_project/data/raw/esp8266-technical_reference_en.pdf",
+      "sha256": "25f08aa786724a9c82ad503fda6b4339b154d59efedc5c9dfff9544aca756211"
+    }
+  ],
+  "outputs": [
+    "/content/week3_project/data/pipeline_v1/documents_trm/prepared_text.jsonl"
+  ],
+  "source_output_mapping": [
+    {
+      "source": "/content/week3_project/data/raw/esp8266-technical_reference_en.pdf",
+      "output": "/content/week3_project/data/pipeline_v1/documents_trm/prepared_text.jsonl"
+    }
+  ],
+  "inspection": {
+    "source": "esp8266-technical_reference_en.pdf",
+    "unit_type": "page",
+    "units": 111,
+    "characters": 199417,
+    "empty_units": []
+  },
+  "validation": {
+    "output_count": 1,
+    "output_sha256": [
+      "4b7fbf87475c2a10dade6c8f41cf0461b014ddcb0c39e1576e9d9ce83c9ffb5a"
+    ],
+    "output_bytes": [
+      316650
+    ]
+  },
+  "source_version": "Not verified",
+  "access_rights": "Not verified — check before sharing"
+}

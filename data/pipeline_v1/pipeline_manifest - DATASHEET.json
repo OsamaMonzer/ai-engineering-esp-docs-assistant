@@ -1,0 +1,45 @@
+{
+  "pipeline_version": "week3-v1",
+  "generated_at_utc": "2026-11-02T01:15:02.585582+00:00",
+  "data_type": "documents_datasheet",
+  "configuration": {
+    "chunk_size": 500,
+    "method": "page/section-aware-line-packed",
+    "cleaning": "ligatures; split-T repair; whitespace",
+    "document_version": "Version 3.7 (2025.11)"
+  },
+  "processing_method": "page/section-aware-line-packed chunks of 500 chars; ligatures; split-T repair; whitespace",
+  "sources": [
+    {
+      "path": "/content/week3_project/data/raw/0c-esp-wroom-02_datasheet_en.pdf",
+      "sha256": "092893b04e97d5a8e5c224f03d02062ca5e9523ff86bdc8b689b0c6ba0668750"
+    }
+  ],
+  "outputs": [
+    "/content/week3_project/data/pipeline_v1/documents_datasheet/prepared_text.jsonl"
+  ],
+  "source_output_mapping": [
+    {
+      "source": "/content/week3_project/data/raw/0c-esp-wroom-02_datasheet_en.pdf",
+      "output": "/content/week3_project/data/pipeline_v1/documents_datasheet/prepared_text.jsonl"
+    }
+  ],
+  "inspection": {
+    "source": "0c-esp-wroom-02_datasheet_en.pdf",
+    "unit_type": "page",
+    "units": 23,
+    "characters": 25227,
+    "empty_units": []
+  },
+  "validation": {
+    "output_count": 1,
+    "output_sha256": [
+      "7d6c9e10037a55aca4dee315cfdc9d5a518eac343682a0d6481522931535a654"
+    ],
+    "output_bytes": [
+      43082
+    ]
+  },
+  "source_version": "Not verified",
+  "access_rights": "Not verified — check before sharing"
+}
