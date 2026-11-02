@@ -1,9 +1,9 @@
 # Architecture Decisions & Traceability — ESP Docs Assistant (ESP8266)
 
-**Course:** AI Engineering — Topic 2 Lab
-**Author:** Osama
-**Version:** 1.0
-**Date:** 22 October 2026
+**Course:** AI Engineering — Topic 2 Lab  
+**Author:** Osama  
+**Version:** 1.1  
+**Date:** 2 November 2026 (Week 3 update)
 
 This document records the key architecture decisions for the V1 conceptual architecture (`week2_architecture_v1.png`), the trade-offs accepted, and the initial requirements traceability matrix. It builds on `week2_requirements.md` and `week2_evaluation_criteria.md`.
 
@@ -63,17 +63,19 @@ Starting point: **User Query → Language Model Service → Response**. This sim
 
 | Objective ID | Requirement Type | Evaluation Criterion | Architecture Element | Later Evidence |
 |---|---|---|---|---|
-| O3 | Functional (FR1, FR2); Non-functional (NFR2) | Answer correctness | Knowledge Access, Knowledge Source, Language Model Service | Rubric-scored results on the supported-question set (≥ 40 questions), compared with a base-model-only baseline. |
-| O1, O2 | Functional (FR4); Responsible AI (RAI1) | Source citation and support | Knowledge Source (source information), Grounding & Citation Check | Citation presence and citation–source match results from the evaluation run. |
-| O2 | Responsible AI (RAI2) | Electrical-ratings accuracy and verification reminder | Knowledge Source, Grounding & Citation Check | Numeric-claim audit and reminder check on the electrical-ratings set (≥ 20 questions). |
+| O3 | Functional (FR1, FR2); Non-functional (NFR2) | Answer correctness | Knowledge Access, Knowledge Source, Language Model Service | Rubric-scored results on the supported-question set (≥ 40 questions), compared with a base-model-only baseline. Week 3: Knowledge Source data prepared from three sources (63 / 460 / 30 chunks; `docs/week3_data_inventory.md`). |
+| O1, O2 | Functional (FR4); Responsible AI (RAI1) | Source citation and support | Knowledge Source (source information), Grounding & Citation Check | Citation presence and citation–source match results from the evaluation run. Week 3: every prepared chunk carries its document and page (PDF) or section (web page); see `docs/week3_pipeline_decisions.md`. |
+| O2 | Responsible AI (RAI2) | Electrical-ratings accuracy and verification reminder | Knowledge Source, Grounding & Citation Check | Numeric-claim audit and reminder check on the electrical-ratings set (≥ 20 questions). Week 3: electrical tables extract with values and units intact; no "Absolute Maximum Ratings" text found in the datasheet extract, so maximum-rating questions need abstention (`docs/week3_data_inventory.md`). |
 | O2 | Functional (FR7); Responsible AI (RAI3) | Out-of-scope refusal and redirect | Scope / Safety Control | Refusal-and-redirect results on the out-of-scope set (≥ 20 queries). |
-| O2 | Functional (FR6); Responsible AI (RAI1) | Abstention when evidence is missing | Knowledge Access, Grounding & Citation Check | Abstention results on the no-evidence set (≥ 10 questions). |
+| O2 | Functional (FR6); Responsible AI (RAI1) | Abstention when evidence is missing | Knowledge Access, Grounding & Citation Check | Abstention results on the no-evidence set (≥ 10 questions). Week 3: the missing absolute-maximum text gives a ready no-evidence test case. |
 | O3 | Non-functional (NFR1, NFR3) | Response latency; inference cost | Evaluation Point | Latency and cost records over the 50-query workload. |
 | O1 | Functional (FR8) | Response clarity | Language Model Service, Application Interface | Clarity rubric scores on the supported-question responses. |
 | O2 | Responsible AI (RAI4) | Credential protection | Privacy Control | Payload inspection results for the privacy test set (≥ 10 queries containing dummy credentials). |
-| O2 | Non-functional (NFR4) | Document-update time | Document Ingestion | Result of a controlled document-add test with a new document. |
-| O2 | Functional (FR3, FR5) | Version applicability handling | Knowledge Source (version information), Knowledge Access, Response / Output (version note) | Version-handling results on the version-sensitive questions in the supported set (≥ 6 questions). |
+| O2 | Non-functional (NFR4) | Document-update time | Document Ingestion | Result of a controlled document-add test with a new document. Week 3: sources are listed in one `DOCS` configuration; adding one takes a single entry and a rerun (time not yet measured; `notebooks/week3_pipeline.ipynb`). |
+| O2 | Functional (FR3, FR5) | Version applicability handling | Knowledge Source (version information), Knowledge Access, Response / Output (version note) | Version-handling results on the version-sensitive questions in the supported set (≥ 6 questions). Week 3: version and date recorded per source (datasheet v3.7 / 2025.11, TRM v1.7 / 2020.10, SDK "latest" retrieved 2 Nov 2026) in `docs/week3_data_inventory.md`. |
 | O3 | Non-functional (NFR5) | Response reliability | Evaluation Point (records every response outcome) | Successful response rate over the 50-query workload. |
+
+**Week 3 update (2 November 2026):** The Knowledge Source and Document Ingestion components now have a working V1 data pipeline. Evidence is linked in the Later Evidence column above.
 
 ---
 
