@@ -37,9 +37,11 @@ Undergraduate students and beginner-to-intermediate hobbyist developers building
 - ESP-WROOM-02 Datasheet — [https://www.espressif.com/sites/default/files/documentation/0c-esp-wroom-02_datasheet_en.pdf](https://www.espressif.com/sites/default/files/documentation/0c-esp-wroom-02_datasheet_en.pdf)
 - ESP8266 RTOS SDK Programming Guide (Get Started) — [https://docs.espressif.com/projects/esp8266-rtos-sdk/en/latest/get-started/index.html](https://docs.espressif.com/projects/esp8266-rtos-sdk/en/latest/get-started/index.html)
 
-> Source PDFs are not committed to this repository (see `.gitignore`). Download them locally from the links above.
+> Source PDFs and locally generated extracted-text files are not committed to this repository (see `.gitignore`). The notebook downloads the two PDF sources and retrieves the SDK Get Started page for local conversion.
 
-**Data pipeline and reproducibility:** The Week 3 pipeline notebook downloads all three sources itself, and the SDK web page is saved as text. To reproduce the pipeline, open `notebooks/week3_pipeline.ipynb` in Google Colab and run all cells.
+**Prepared-data sharing:** The notebook generates the three prepared JSONL datasets locally, but the full-text exports are intentionally excluded from this public repository because no clear redistribution licence covering the extracted document text was identified. The committed manifests retain source/output hashes, counts and provenance without publishing the extracted text. Do not republish the prepared text unless you obtain written permission or confirm an applicable licence. See [`data/README.md`](data/README.md).
+
+**Reproduction:** Open `notebooks/week3_pipeline.ipynb` in Google Colab and run all cells.
 
 ## Weekly Progress
 

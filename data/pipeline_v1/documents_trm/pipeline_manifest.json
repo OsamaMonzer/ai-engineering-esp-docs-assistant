@@ -11,17 +11,17 @@
   "processing_method": "page/section-aware-line-packed chunks of 500 chars; ligatures; split-T repair; whitespace",
   "sources": [
     {
-      "path": "/content/week3_project/data/raw/esp8266-technical_reference_en.pdf",
+      "path": "data/raw/esp8266-technical_reference_en.pdf",
       "sha256": "25f08aa786724a9c82ad503fda6b4339b154d59efedc5c9dfff9544aca756211"
     }
   ],
   "outputs": [
-    "/content/week3_project/data/pipeline_v1/documents_trm/prepared_text.jsonl"
+    "data/pipeline_v1/documents_trm/prepared_text.jsonl"
   ],
   "source_output_mapping": [
     {
-      "source": "/content/week3_project/data/raw/esp8266-technical_reference_en.pdf",
-      "output": "/content/week3_project/data/pipeline_v1/documents_trm/prepared_text.jsonl"
+      "source": "data/raw/esp8266-technical_reference_en.pdf",
+      "output": "data/pipeline_v1/documents_trm/prepared_text.jsonl"
     }
   ],
   "inspection": {
@@ -40,6 +40,7 @@
       316650
     ]
   },
-  "source_version": "Not verified",
-  "access_rights": "Not verified — check before sharing"
+  "source_version": "Version 1.7",
+  "access_rights": "Redistribution permission not verified; prepared full-text JSONL excluded from the public repository.",
+  "prepared_text_publicly_committed": false
 }

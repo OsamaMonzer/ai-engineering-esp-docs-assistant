@@ -1,4 +1,11 @@
+# Source documents and locally generated full-text data (redistribution not verified)
 data/*.pdf
+data/raw/
+data/prepared_text_*.jsonl
+data/processed/*.jsonl
+data/pipeline_v1/*.jsonl
+data/pipeline_v1/**/*.jsonl
+
 .env
 *.key
 __pycache__/

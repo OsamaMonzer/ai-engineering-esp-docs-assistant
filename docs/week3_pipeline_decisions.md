@@ -14,7 +14,7 @@
 | FR2, FR3 | SDK setup content | S03 |
 | NFR4 | Adding a document is cheap | `DOCS` dictionary (Cell 8A) |
 
-Pathway: **A (PDF/TXT)** only. Other pathways do not apply (no tabular, image, audio, JSON or time-series data). S03 is HTML, so it is saved as text first and then processed through the TXT branch.
+Pathway: **A (PDF/TXT)** only. Other pathways do not apply (no tabular, image, audio, JSON or time-series data). S03 is retrieved as HTML, converted to text with BeautifulSoup, and then processed through the TXT branch.
 
 ## 2. Part B comparison (datasheet S01, 500-character target)
 
@@ -40,13 +40,13 @@ PDF extraction separates lines with single newlines, so the paragraph splitter r
 - **Batch, not streaming:** the sources are static documents updated rarely; the pipeline is rerun on demand.
 - **Citation fields:** PDF chunks carry `page` (`section` is null); web chunks carry `section` (`page` is null).
 - **NFR4:** adding a document means adding one entry to `DOCS` and running Cell 8A. The 15-minute threshold has not been measured yet.
-- **Output locations:** Part B in `data/processed/` with `data/week3_manifest.json`; Part C in `data/pipeline_v1/<kind>/` with `pipeline_manifest.json`, for `documents_datasheet`, `documents_trm` and `documents_sdk`.
+- **Output locations:** Part B JSONL is generated locally in `data/processed/` and recorded in `data/week3_manifest.json`; Part C JSONL is generated locally in `data/pipeline_v1/<kind>/` alongside `pipeline_manifest.json`. The manifests are committed; the full-text JSONL outputs are excluded from the public repository pending rights confirmation.
 
 ## 4. Stage contracts
 
 | Stage | Contract / evidence | Failure response |
 |---|---|---|
-| Ingest | Chosen file exists (`select_source` / `resolve_source`); download uses `raise_for_status` | Stop with a clear error (missing file or failed download) |
+| Ingest | Chosen file exists (`select_source` / `resolve_source`); downloads use `raise_for_status` | Stop with a clear error (missing file or failed download) |
 | Inspect | Text is extractable (`inspect_documents`); pages or sections counted, empty ones listed | Stop if no extractable text (scanned PDFs need OCR) |
 | Prepare | Chunks are produced from the selected method | Stop if no chunks |
 | Validate | Output exists, is non-empty, reads back with the same count; every PDF chunk has an integer page, every web chunk a section; SHA-256 recorded | Stop on missing, empty or mismatched output |
@@ -58,8 +58,8 @@ PDF extraction separates lines with single newlines, so the paragraph splitter r
 
 ## 5. Evidence
 
-- Part B: 63 chunks (S01), 460 (S02), 30 (S03); all pages covered (23 of 23, 111 of 111); lineage manifest check **PASS** for 3 records.
-- Part C: Part C chunk text is identical to Part B for all three sources. Repeatability check (Cell 9): **PASS** for documents_datasheet, documents_trm and documents_sdk.
+- Part B: 63 chunks (S01), 460 (S02), 30 (S03); all pages/sections covered (23 of 23, 111 of 111, 16 of 16); lineage manifest check **PASS** for 3 records. The JSONL outputs were generated and validated locally but are not committed publicly.
+- Part C: Part C chunk text is identical to Part B for all three sources. Repeatability check (Cell 9): **PASS** for documents_datasheet, documents_trm and documents_sdk. The three Part C manifests are retained in the repository; the prepared text files remain local-only.
 - Differences between Part B and Part C: Part C records omit the `processing` field (it is in the manifest as `processing_method`); Part C inspection reports `units` rather than `pages`.
 
 ## 6. Risks carried to Topic 4
@@ -69,4 +69,4 @@ PDF extraction separates lines with single newlines, so the paragraph splitter r
 - Chunks contain table-of-contents dot leaders and footer boilerplate; the pinout figure is lost; headers can be split from table rows.
 - Values such as 80 mA (average), 170 mA (transmit) and 500 mA (supply) are different quantities and must be cited with their row labels.
 - S03 omits per-OS toolchain steps (FR2 only partly covered); one S03 row mentions ESP32, which is out of scope (FR7).
-- Provenance caveat: SHA-256 shows the same bytes were processed, not that redistribution is permitted. Raw PDFs are gitignored; check Espressif's terms before committing prepared chunks. `source_version` and `access_rights` in the manifests are default placeholders; the inventory is the authority.
+- Provenance and sharing: SHA-256 shows file identity, not redistribution permission. No clear licence covering publication of the extracted document text was identified. The full-text JSONL exports and raw source files are therefore excluded from the public repository; committed manifests retain source/output checksums and counts. The notebook retrieves and processes source material for local project use; the extracted full-text outputs are not published. Revisit sharing only after written permission or an applicable licence is confirmed; see `data/README.md` and Espressif's [Terms of Service](https://www.espressif.com/en/content/terms-use).

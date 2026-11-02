@@ -11,17 +11,17 @@
   "processing_method": "page/section-aware-line-packed chunks of 500 chars; ligatures; split-T repair; whitespace",
   "sources": [
     {
-      "path": "/content/week3_project/data/raw/esp8266_rtos_sdk_get_started.txt",
+      "path": "data/raw/esp8266_rtos_sdk_get_started.txt",
       "sha256": "c494bc164c771f3ccdf55fbf68c7b28ffddb8e72a4267df934a85b601fabca5e"
     }
   ],
   "outputs": [
-    "/content/week3_project/data/pipeline_v1/documents_sdk/prepared_text.jsonl"
+    "data/pipeline_v1/documents_sdk/prepared_text.jsonl"
   ],
   "source_output_mapping": [
     {
-      "source": "/content/week3_project/data/raw/esp8266_rtos_sdk_get_started.txt",
-      "output": "/content/week3_project/data/pipeline_v1/documents_sdk/prepared_text.jsonl"
+      "source": "data/raw/esp8266_rtos_sdk_get_started.txt",
+      "output": "data/pipeline_v1/documents_sdk/prepared_text.jsonl"
     }
   ],
   "inspection": {
@@ -40,6 +40,7 @@
       19936
     ]
   },
-  "source_version": "Not verified",
-  "access_rights": "Not verified — check before sharing"
+  "source_version": "docs.espressif.com 'latest' (see retrieval date in file header)",
+  "access_rights": "Redistribution permission not verified; prepared full-text JSONL excluded from the public repository.",
+  "prepared_text_publicly_committed": false
 }

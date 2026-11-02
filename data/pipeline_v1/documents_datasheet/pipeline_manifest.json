@@ -11,17 +11,17 @@
   "processing_method": "page/section-aware-line-packed chunks of 500 chars; ligatures; split-T repair; whitespace",
   "sources": [
     {
-      "path": "/content/week3_project/data/raw/0c-esp-wroom-02_datasheet_en.pdf",
+      "path": "data/raw/0c-esp-wroom-02_datasheet_en.pdf",
       "sha256": "092893b04e97d5a8e5c224f03d02062ca5e9523ff86bdc8b689b0c6ba0668750"
     }
   ],
   "outputs": [
-    "/content/week3_project/data/pipeline_v1/documents_datasheet/prepared_text.jsonl"
+    "data/pipeline_v1/documents_datasheet/prepared_text.jsonl"
   ],
   "source_output_mapping": [
     {
-      "source": "/content/week3_project/data/raw/0c-esp-wroom-02_datasheet_en.pdf",
-      "output": "/content/week3_project/data/pipeline_v1/documents_datasheet/prepared_text.jsonl"
+      "source": "data/raw/0c-esp-wroom-02_datasheet_en.pdf",
+      "output": "data/pipeline_v1/documents_datasheet/prepared_text.jsonl"
     }
   ],
   "inspection": {
@@ -40,6 +40,7 @@
       43082
     ]
   },
-  "source_version": "Not verified",
-  "access_rights": "Not verified — check before sharing"
+  "source_version": "Version 3.7 (2025.11)",
+  "access_rights": "Redistribution permission not verified; prepared full-text JSONL excluded from the public repository.",
+  "prepared_text_publicly_committed": false
 }

@@ -9,9 +9,9 @@
       "prepared_output": "data/processed/prepared_text_0c-esp-wroom-02_datasheet_en.jsonl",
       "prepared_sha256": "9500d80cefe3737fa7f8fff275371c05385fcdbba1234835cb08bf1c348cc221",
       "processing_note": "page/section-aware-line-packed-char-500; ligature-clean; split-T-repair",
-      "source_version": "Not verified",
-      "access_rights": "Not verified",
-      "status": "Prepared; quality review pending"
+      "source_version": "Version 3.7 (2025.11)",
+      "access_rights": "Redistribution permission not verified; prepared full-text JSONL excluded from the public repository.",
+      "status": "Prepared and validated locally; full-text output excluded from public repository pending permission confirmation."
     },
     {
       "source_id": "S02",
@@ -20,9 +20,9 @@
       "prepared_output": "data/processed/prepared_text_esp8266-technical_reference_en.jsonl",
       "prepared_sha256": "982706828273c616402381c42713b74d6b750036d4615fe5c55e23a56e5ec66e",
       "processing_note": "page/section-aware-line-packed-char-500; ligature-clean; split-T-repair",
-      "source_version": "Not verified",
-      "access_rights": "Not verified",
-      "status": "Prepared; quality review pending"
+      "source_version": "Version 1.7 (2020.10)",
+      "access_rights": "Redistribution permission not verified; prepared full-text JSONL excluded from the public repository.",
+      "status": "Prepared and validated locally; full-text output excluded from public repository pending permission confirmation."
     },
     {
       "source_id": "S03",
@@ -31,9 +31,10 @@
       "prepared_output": "data/processed/prepared_text_esp8266_rtos_sdk_get_started.jsonl",
       "prepared_sha256": "a1ec891008e185ae99cf221702f08dbd943d4741f018dbee9d6e248131b5a0fd",
       "processing_note": "page/section-aware-line-packed-char-500; ligature-clean; split-T-repair",
-      "source_version": "Not verified",
-      "access_rights": "Not verified",
-      "status": "Prepared; quality review pending"
+      "source_version": "ESP8266 RTOS SDK documentation: latest branch; retrieved 2026-11-02",
+      "access_rights": "Redistribution permission not verified; prepared full-text JSONL excluded from the public repository.",
+      "status": "Prepared and validated locally; full-text output excluded from public repository pending permission confirmation."
     }
-  ]
+  ],
+  "public_distribution_status": "Prepared JSONL files are generated locally and excluded from this public repository pending confirmation of redistribution rights."
 }
