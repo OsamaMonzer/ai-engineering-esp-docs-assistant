@@ -1,0 +1,39 @@
+{
+  "pipeline_version": "week3-v1",
+  "generated_at_utc": "2026-11-02T01:04:29.033870+00:00",
+  "records": [
+    {
+      "source_id": "S01",
+      "source_filename": "0c-esp-wroom-02_datasheet_en.pdf",
+      "source_sha256": "092893b04e97d5a8e5c224f03d02062ca5e9523ff86bdc8b689b0c6ba0668750",
+      "prepared_output": "data/processed/prepared_text_0c-esp-wroom-02_datasheet_en.jsonl",
+      "prepared_sha256": "9500d80cefe3737fa7f8fff275371c05385fcdbba1234835cb08bf1c348cc221",
+      "processing_note": "page/section-aware-line-packed-char-500; ligature-clean; split-T-repair",
+      "source_version": "Not verified",
+      "access_rights": "Not verified",
+      "status": "Prepared; quality review pending"
+    },
+    {
+      "source_id": "S02",
+      "source_filename": "esp8266-technical_reference_en.pdf",
+      "source_sha256": "25f08aa786724a9c82ad503fda6b4339b154d59efedc5c9dfff9544aca756211",
+      "prepared_output": "data/processed/prepared_text_esp8266-technical_reference_en.jsonl",
+      "prepared_sha256": "982706828273c616402381c42713b74d6b750036d4615fe5c55e23a56e5ec66e",
+      "processing_note": "page/section-aware-line-packed-char-500; ligature-clean; split-T-repair",
+      "source_version": "Not verified",
+      "access_rights": "Not verified",
+      "status": "Prepared; quality review pending"
+    },
+    {
+      "source_id": "S03",
+      "source_filename": "esp8266_rtos_sdk_get_started.txt",
+      "source_sha256": "c494bc164c771f3ccdf55fbf68c7b28ffddb8e72a4267df934a85b601fabca5e",
+      "prepared_output": "data/processed/prepared_text_esp8266_rtos_sdk_get_started.jsonl",
+      "prepared_sha256": "a1ec891008e185ae99cf221702f08dbd943d4741f018dbee9d6e248131b5a0fd",
+      "processing_note": "page/section-aware-line-packed-char-500; ligature-clean; split-T-repair",
+      "source_version": "Not verified",
+      "access_rights": "Not verified",
+      "status": "Prepared; quality review pending"
+    }
+  ]
+}
